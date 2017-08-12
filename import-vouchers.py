@@ -30,22 +30,6 @@ def actions():
         issue_date = datetime.strptime(row['DateFor'], '%m-%y')
         voucher_number = row['Voucher Number'].strip()
 
-        # doc = {
-        #     '_index': 'cases',
-        #     '_type': 'case',
-        #     '_id': voucher_number,
-        #     'parent': cleanup_name(row['Parent']),
-        # }
-        #
-        # try:
-        #     doc['children'] = cleanup_name(row['Children'])
-        # except:
-        #     pass
-        #
-        # print(doc)
-        #
-        # yield doc
-
         doc = {
             '_index': 'rainbow',
             '_type': 'voucher',
